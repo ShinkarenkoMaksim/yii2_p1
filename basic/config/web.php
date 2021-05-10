@@ -15,6 +15,9 @@ $config = [
         'admin' => [
             'class' => \app\modules\admin\Module::class,
         ],
+        'statistics' => [
+            'class' => 'app\modules\statistics\Module',
+        ],
     ],
     'components' => [
         'request' => [
@@ -54,8 +57,8 @@ $config = [
             'rules' => [
             ],
         ],
-        'comp' => [
-            'class' => \app\components\Comp::class,
+        'previousPage' => [
+            'class' => 'app\components\PreviousPageComponent',
         ],
     ],
     'params' => $params,
