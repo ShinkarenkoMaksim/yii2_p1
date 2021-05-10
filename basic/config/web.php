@@ -11,6 +11,14 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
+    'modules' => [
+        'admin' => [
+            'class' => \app\modules\admin\Module::class,
+        ],
+        'statistics' => [
+            'class' => 'app\modules\statistics\Module',
+        ],
+    ],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -48,6 +56,9 @@ $config = [
             'showScriptName' => false,
             'rules' => [
             ],
+        ],
+        'previousPage' => [
+            'class' => 'app\components\PreviousPageComponent',
         ],
     ],
     'params' => $params,

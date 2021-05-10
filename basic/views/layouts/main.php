@@ -59,11 +59,16 @@ AppAsset::register($this);
     NavBar::end();
     ?>
 
+
+
     <div class="container">
         <?= Breadcrumbs::widget([
             'links' => $this->params['breadcrumbs'] ?? [],
         ]) ?>
         <?= Alert::widget() ?>
+        <div>
+            <a href="<?=Yii::$app->previousPage->savePrevPage() ?>">Назад</a>
+        </div>
         <?= $content ?>
     </div>
 </div>
